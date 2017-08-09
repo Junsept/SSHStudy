@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+ 
+    <session-factory>
+        <!-- Database connection settings -->
+        <!-- 设置数据库驱动 --> 
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- 设置数据库URL -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/lol?characterEncoding=UTF-8</property>
+        <!-- 数据库用户名 -->
+        <property name="connection.username">root</property>
+        <!-- 数据库密码 -->
+        <property name="connection.password">root</property>
+        <!--指定对应数据库的方言，hibernate为了更好适配各种关系数据库，针对每种数据库都指定了一个方言dialect --> 
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <!-- 二级缓存配置 -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        
+        <mapping resource="com/domain/Hero.hbm.xml" />
+        <mapping resource="com/domain/Category.hbm.xml" />
+    </session-factory>
+ 
+</hibernate-configuration>
