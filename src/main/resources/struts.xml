@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  
+    <struts>  
+    	<constant name="struts.multipart.maxSize" value="20480000"/>
+        <package name="struts2" extends="struts-default">
+          
+            <interceptors>
+            	<interceptor name="dateInterceptor" class="com.interceptor.DateInterceptor" />
+        	</interceptors>
+        	
+            <action name="login" class="com.controller.TestStruts" method="logintest">  
+              
+              	<interceptor-ref name="dateInterceptor" />
+           		<interceptor-ref name="defaultStack" /> 
+           		
+                <result name="fail">/fail.jsp</result>  
+                <result name="success">/success.jsp</result>
+            </action>  
+        </package>  
+    </struts>  
