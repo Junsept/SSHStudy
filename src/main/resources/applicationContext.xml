@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+   http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+   http://www.springframework.org/schema/tx 
+   http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+   http://www.springframework.org/schema/context      
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<!-- <context:annotation-config/>采用注解的方式进行配置   -->
+ <!--    <bean name="c" class="com.domain.Category">
+        <property name="name" value="category1" />
+    </bean>
+      <bean name="h" class="com.domain.Hero">
+    </bean>
+     <context:component-scan base-package="com.domain"/>对bean的注解
+     
+    <bean name="s" class="com.service.HeroService">
+    </bean>    
+     
+    <bean id="loggerAspect" class="com.aspect.LoggerAspect"/>
+     
+    <aop:config>
+        <aop:pointcut id="loggerCutpoint"
+            expression=
+            "execution(* com.service.HeroService.*(..)) "/>
+             
+        <aop:aspect id="logAspect" ref="loggerAspect">
+            <aop:around pointcut-ref="loggerCutpoint" method="log"/>
+        </aop:aspect>
+    </aop:config> 
+     -->
+    <bean name="c" class="com.domain.Category">
+        <property name="name" value="category1" />
+    </bean>
+  
+</beans>

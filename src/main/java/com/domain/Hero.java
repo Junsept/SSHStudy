@@ -1,5 +1,8 @@
 package com.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 public class Hero{
 	private int id;
 	private String name;

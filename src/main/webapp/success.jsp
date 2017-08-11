@@ -10,8 +10,7 @@
 <body>
 <h1>成功</h1>
   <body>  
-  	${name}
-  	${date}
+  	${hero.name}
   	<br>
   	${imgFileName}
   	<br><br>

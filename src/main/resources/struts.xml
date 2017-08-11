@@ -5,6 +5,7 @@
   
     <struts>  
     	<constant name="struts.multipart.maxSize" value="20480000"/>
+        <constant name="struts.objectFactory" value="spring"/>
         <package name="struts2" extends="struts-default">
           
             <interceptors>
@@ -19,5 +20,10 @@
                 <result name="fail">/fail.jsp</result>  
                 <result name="success">/success.jsp</result>
             </action>  
+            
+             <action name="submithero" class="com.controller.HeroController" method="submithero">     
+                <result name="fail">/fail.jsp</result>  
+                <result name="success">/success.jsp</result>
+            </action> 
         </package>  
     </struts>  
